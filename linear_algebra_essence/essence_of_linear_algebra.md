@@ -202,9 +202,31 @@ $$
 
 3）矩阵列看做变换后的基向量；
 
+4）矩阵向量乘法：看做是矩阵列的线性组合，其中组合系数是向量元素；
 
+![](./img/ch03_04_matrix_column_vec.png)
 
+<br>
 
+---
+
+### 【3.2.2】练习：用矩阵描述线性变换
+
+1）例1：把坐标轴逆时针旋转90度；
+
+- 旋转前的基向量：$\hat{i}=(1,0), \hat{j}=(0,1)$
+- 旋转后的基向量：$\hat{i}=(0,1), \hat{j}=(-1,0)$
+- 则变换后的基向量$\hat{i},\hat{j} $组成的线性变换矩阵$M=\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}$
+
+如果想计算任意向量$v=\begin{bmatrix}x \\ y\end{bmatrix}$在逆时针旋转90度后的位置，你只需要把该向量v与矩阵M相乘即可。
+$$
+\begin{bmatrix}0 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}=x\begin{bmatrix}0 \\ 1 \end{bmatrix} + y\begin{bmatrix} -1 \\ 0 \end{bmatrix}=\begin{bmatrix}0*x-y \\ 1*x + 0*y \end{bmatrix}=\begin{bmatrix}-y \\ x \end{bmatrix}
+$$
+2）例2：剪切变换：
+
+- $\hat{i}不变，坐标还是为(1,0)； \hat{j}移动到坐标(1,1)$；线性变换矩阵$M=\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$
+- 为计算任意向量$v=\begin{bmatrix}x \\ y\end{bmatrix}$在剪切变换后的位置，你只需要把该向量v与矩阵M相乘即可
+- $\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}=x\begin{bmatrix}1 \\ 0\end{bmatrix}+y\begin{bmatrix} 1 \\ 1 \end{bmatrix}=\begin{bmatrix}x+y \\ y\end{bmatrix}$
 
 
 
