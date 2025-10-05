@@ -195,10 +195,12 @@ $$
 $$
 x\begin{bmatrix} a \\ c \end{bmatrix} + y\begin{bmatrix} b \\ d \end{bmatrix}=\begin{bmatrix} ax+by \\ cx+dy \end{bmatrix}
 $$
-2）上述过程也可以看做是<font color=red>矩阵向量乘法</font>，如下。
+2）上述过程也可以看做是<font color=red>矩阵向量乘法</font>，如下（矩阵放在向量左边，类似与一个函数）。
 $$
 \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} =x\begin{bmatrix} a \\ c \end{bmatrix} + y\begin{bmatrix} b \\ d \end{bmatrix}=\begin{bmatrix} ax+by \\ cx+dy \end{bmatrix}
 $$
+
+3）矩阵列看做变换后的基向量；
 
 
 
