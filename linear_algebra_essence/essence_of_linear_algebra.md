@@ -259,6 +259,8 @@ $$
 
 # 【4】矩阵乘法与线性变换复合的联系 
 
+## 【4.1】复合变换
+
 1）复合变换：指多次线性变换；如逆时针旋转90度，再执行剪切变换；
 
 - 旋转+剪切前的基向量：$\hat{i}=(1,0), \hat{j}=(0,1)$
@@ -275,15 +277,83 @@ $$
 
 <br>
 
+3）复合线性变换矩阵：应该是旋转线性变换矩阵左乘剪切线性变换矩阵；
+
+- <font color=red>两个矩阵相乘的几何意义（如旋转矩阵左乘剪切矩阵）：指两个线性变换的相继作用</font>；
+
+ ![](./img/ch04_02_composite_matrix.png)
+
+<br>
+
+---
+
+## 【4.2】矩阵乘法（基于矩阵向量乘法）
+
+1）给定向量M1，M2，则M1左乘M2计算过程如下：
+$$
+M_1=\begin{bmatrix} 1 & -2 \\ 1 & 0 \end{bmatrix} , 
+M_2=\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}
+$$
+则M1左乘M2计算过程如下：
+$$
+M_2M_1=\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} 1 & -2 \\ 1 & 0 \end{bmatrix} \\
+$$
+计算步骤如下：
+第1步：$M_1$第1列$\begin{bmatrix} 1 \\ 1\end{bmatrix}$使用$M_2$表示的线性变换后得到如下结果。
+$$
+\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} 1  \\ 1  \end{bmatrix} =1\begin{bmatrix} 0 \\ 1 \end{bmatrix}+1\begin{bmatrix} 2 \\ 0 \end{bmatrix}=\begin{bmatrix} 2 \\ 1 \end{bmatrix}
+$$
+第2步：$M_1$第2列$\begin{bmatrix} -2 \\ 0 \end{bmatrix}$使用$M_2$表示的线性变换后得到如下结果。
+
+$$
+\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} -2  \\ 0  \end{bmatrix} =(-2)\begin{bmatrix} 0 \\ 1 \end{bmatrix}+0\begin{bmatrix} 2 \\ 0 \end{bmatrix}=\begin{bmatrix} 0 \\ -2 \end{bmatrix}
+$$
+综上：等式9的结果如下。
+$$
+M_2M_1=\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} 1 & -2 \\ 1 & 0 \end{bmatrix} =\begin{bmatrix}2 & 0 \\ 1 & -2\end{bmatrix}
+$$
+<br>
+
+---
+
+### 【4.2.1】矩阵乘法的普适性
+
+1）把上述矩阵$M_1$替换为符号$\begin{bmatrix} e & f \\ g & h\end{bmatrix}$，把$M_2$替换为$\begin{bmatrix}a & b \\ c & d\end{bmatrix}$。则$M_1$左乘$M_2$的计算过程如下：
+
+第1步：$M_1$第1列左乘$M_2$如下：
+$$
+\begin{bmatrix}a & b \\ c & d\end{bmatrix}\begin{bmatrix}e \\ g\end{bmatrix}=e\begin{bmatrix}a \\ c\end{bmatrix}+g\begin{bmatrix}b \\ d\end{bmatrix}=\begin{bmatrix} ac+bg \\ ce+dg \end{bmatrix}
+$$
 
 
+第2步：$M_1$第2列左乘$M_2$如下：
+$$
+\begin{bmatrix} a & b \\ c & d \end{bmatrix}\begin{bmatrix} f \\ h \end{bmatrix}=f\begin{bmatrix}a \\ c\end{bmatrix}+h\begin{bmatrix} b \\ d\end{bmatrix}=\begin{bmatrix} af+bh \\ cf+dh \end{bmatrix}
+$$
+综上：$M_1$左乘$M_2$的乘积结果如下：
+$$
+M_2M_1=\begin{bmatrix}e & f \\ g & h\end{bmatrix}\begin{bmatrix}a & b \\ c & d\end{bmatrix}=\begin{bmatrix} ac+bg & af+bh \\ ce+dg & cf+dh \end{bmatrix}
+$$
 
 
+<br>
 
+---
 
+### 【4.2.2】矩阵乘法的意义
 
+1）矩阵乘法的意义：指两个线性变换的相继作用；
 
+- 如$M_2M_1 \not= M_1M_2$，就可以通过线性变换来解释；如先旋转再剪切与先剪切再旋转的线性变换效果明显不同，所以矩阵乘法的矩阵顺序不能交换；
+- 证明矩阵乘法的基结合律，即$(AB)C=A(BC)$
 
+<br>
+
+---
+
+## 【4.3】三维空间的线性变换
+
+1）
 
 
 
