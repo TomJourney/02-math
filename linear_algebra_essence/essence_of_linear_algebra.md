@@ -353,7 +353,67 @@ $$
 
 ## 【4.3】三维空间的线性变换
 
-1）
+1）考虑如下图的三维空间的线性变换：
+
+![](./img/ch04_05_3dim_transform.png)
+
+【图解】$L(\vec{v})$是三维空间中的线性变换矩阵（或线性变化函数，对的，简单理解，矩阵就是函数）
+
+2）三维空间中的线性变换：
+
+- $L(\vec{v})$描述的线性变换（函数）移动三维空间中的所有点，保持网格平行且等距分布，并保持原点不动；
+- 与二维空间相同：
+  - 我们看到三维空间中的每一个点，实际上是用来代表以它为终点的向量； 而线性变换矩阵（函数）做的只是将输入向量input移动到对应输出向量output的位置；
+  - 三维线性变换由基向量的去向完全决定；
+- 我们有3个通用的标准基向量：x轴的单位向量是$\hat{i}$，y轴的单位向量是$\hat{j}$，z轴的单位向量是$\hat{k}$；
+
+<br>
+
+---
+
+### 【4.3.1】跟踪基向量易于观察线性变换
+
+1）三维空间的基向量：
+
+变换前：
+$$
+\hat{i}=\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \hat{j}=\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \hat{k}=\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+$$
+
+
+变换后：
+$$
+\hat{i}=\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}, \hat{j}=\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \hat{k}=\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+$$
+变换后的基向量组合到线性变换矩阵M（<font color=red>仅仅使用9个数字，这个矩阵就能够完全描述一个线性变换</font>）：
+$$
+M=\begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 0 \\ -1 & 0 & 1\end{bmatrix}
+$$
+<br>
+
+2）举例：三维空间的线性变换-沿着y轴旋转90度的线性变换（y轴基向量$\hat{j}$不变） 
+
+变换后的基向量：
+$$
+\hat{i}=\begin{bmatrix} 0 \\ 0 \\ -1 \end{bmatrix}, \hat{j}=\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \hat{k}=\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+$$
+变换后的基向量组成的线性变换矩阵M：
+$$
+M=\begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \end{bmatrix}
+$$
+
+
+<br>
+
+---
+
+### 【4.3.2】三维空间向量变换后的位置推导
+
+1）对于向量$\hat{v}=\begin{bmatrix} x \\y \\z\end{bmatrix}$，其经过M矩阵表示的线性变换后的位置是怎样的？推理过程与二维向量几乎相同；
+
+
+
+
 
 
 
