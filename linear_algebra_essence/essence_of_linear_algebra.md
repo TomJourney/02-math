@@ -411,6 +411,40 @@ $$
 
 1）对于向量$\hat{v}=\begin{bmatrix} x \\y \\z\end{bmatrix}$，其经过M矩阵表示的线性变换后的位置是怎样的？推理过程与二维向量几乎相同；
 
+- 向量$\hat{v}=\begin{bmatrix} x \\y \\z\end{bmatrix}$的<font color=red>每个坐标都可以看做是对相应基向量的缩放；把基向量缩放后的向量相加得到变换后的结果</font>。
+
+2）综上，要找到向量v变换后的位置，则需要把向量v的每个坐标与变换矩阵对应列相乘再相加即可，如下。
+$$
+\begin{bmatrix} 0 &1 &2 \\ 3 & 4 &5 \\ 6 &7 &8\end{bmatrix}\begin{bmatrix} x \\ y \\z\end{bmatrix}=x\begin{bmatrix}0\\3\\6\end{bmatrix} + y\begin{bmatrix}1\\4\\7\end{bmatrix} + z\begin{bmatrix}2\\5\\8\end{bmatrix} =\begin{bmatrix}0x+y+2z \\3x+4y+5z \\6x + 7y + 8z\end{bmatrix}
+$$
+![](./img/ch04_06_3dim_in_out.png)
+
+<br>
+
+---
+
+### 【4.3.3】三维空间矩阵乘法
+
+1）三维空间矩阵乘法：先应用右侧矩阵变换，再应用左侧矩阵变换；
+
+2）例：2个三维矩阵相乘；
+$$
+\begin{bmatrix}0 &-1 &2 \\ 5 &1 &5 \\ 1 &4 &-1\end{bmatrix}\begin{bmatrix}0 &1 &2 \\ 3 &4 &5 \\ 6 &7 &8\end{bmatrix}
+$$
+分为如下3个模块，分别计算向量$\begin{bmatrix}0\\3\\6\end{bmatrix}$,$\begin{bmatrix}1\\4\\7\end{bmatrix}$,$\begin{bmatrix}2\\5\\8\end{bmatrix}$经过线性变换矩阵作用后的结果。
+$$
+\begin{bmatrix}0 &-1 &2 \\ 5 &1 &5 \\ 1 &4 &-1\end{bmatrix}\begin{bmatrix}0 \\3\\6\end{bmatrix}=0\begin{bmatrix}0\\5\\1\end{bmatrix}+3\begin{bmatrix}-1\\1\\4\end{bmatrix}+6\begin{bmatrix}2\\5\\-1\end{bmatrix}=\begin{bmatrix}0-3+12 \\0+3+30 \\ 0+12-6 \end{bmatrix}=\begin{bmatrix}9 \\33 \\ 06 \end{bmatrix}
+$$
+<br>
+
+---
+
+# 【5】行列式
+
+
+
+
+
 
 
 
