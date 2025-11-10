@@ -1467,7 +1467,7 @@ $$
 
 - 而其中两个特殊向量 $\hat{i}  , \hat{j}$ 被称为为标准坐标系的基向量；
 
-**坐标**[[1\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-1)（coordinates）是用来描述或标示某点在[空间](https://zh.wikipedia.org/wiki/空間)中[绝对位置](https://zh.wikipedia.org/wiki/絕對位置)的[有序数组](https://zh.wikipedia.org/wiki/有序数组)[[2\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-2)[[3\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-3)。**坐标系**（coordinate system）是一特定的[位置](https://zh.wikipedia.org/wiki/位置向量)[注记系统](https://zh.wikipedia.org/w/index.php?title=註記系統&action=edit&redlink=1)[[4\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-4)（参考系[[5\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-5)），用以确定某点或某目标的空间位置；其定义为：对于一个 *n* [维](https://zh.wikipedia.org/wiki/维度)系统，能够使每一个点（目标）和一组 *n* 个[标量](https://zh.wikipedia.org/wiki/标量_(数学))（有序数组）构成[一一对应](https://zh.wikipedia.org/wiki/一一对应)的系统[[6\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-6)[[7\]](https://zh.wikipedia.org/wiki/坐標系#cite_note-7)。
+坐标[1]（coordinates）是用来描述或标示某点在空间中绝对位置的有序数组[2][3]。坐标系（coordinate system）是一特定的位置注记系统[4]（参考系[5]），用以确定某点或某目标的空间位置；其定义为：对于一个 n 维系统，能够使每一个点（目标）和一组 n 个标量（有序数组）构成一一对应的系统[6][7]。
 
 
 
