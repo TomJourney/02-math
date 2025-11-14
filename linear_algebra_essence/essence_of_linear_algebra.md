@@ -1678,6 +1678,8 @@ $$
 
 # 【10】特征向量和特征值20251107
 
+## 【10.1】特征向量
+
 1）首先考虑二维空间中的线性变换：把基向量$\hat{i}$变换为(3,0)，把$\hat{j}$变化为(1,2)；则其线性变换矩阵为$\begin{bmatrix}3  & 1 \\ 0 & 2\end{bmatrix}$
 
 2）我们关注该线性变换对一个特定向量的作用；并且考虑这个向量张成的空间，也就是通过原点和向量尖端的直线；
@@ -1715,13 +1717,41 @@ $$
 $$
 \begin{bmatrix}3 & 1 \\ 0 &2\end{bmatrix} \vec{x}=2\vec{x}
 $$
+5）同上，线性性质暗示着一点：处在它[(3,0), (-1,1)]所张成空间对角线上的其他任何一个向量，也是被拉伸为原来的2倍。
 
+这个对角线所属的可选多个方向表示为如下向量。
+$$
+\begin{bmatrix}3 &1 \\ 0 &2 \end{bmatrix}\begin{bmatrix}1 \\ 1 \end{bmatrix}=\begin{bmatrix}4 \\ 2 \end{bmatrix}
 $$
 
 $$
+\begin{bmatrix}3 &1 \\ 0 &2 \end{bmatrix}\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}-2 \\ 2 \end{bmatrix}
+$$
+
+<img src="./img/ch10_02.png" width="60%"/>
 
 
 
+对这个变换$\begin{bmatrix}3 & 1 \\ 0 &2\end{bmatrix}$而言，以上就是其所有拥有这一性质的向量（留在它们张成的空间里）。
+
+<br>
+
+---
+
+### 【10.1.1】引出特征向量-特殊变换小结
+
+1）特征变换对应矩阵：$\begin{bmatrix}3 & 1 \\ 0 &2\end{bmatrix}$
+
+2）该矩阵变换效果如下：
+
+- x轴上的向量被拉伸为原来的3倍，对角线上的向量被拉伸为原来2倍；
+- 任何其他向量在变换中都有或多或少的旋转，从而离开它张成的直线；
+
+<img src="./img/ch10_04.png" width="60%"/>
+
+旋转效果：
+
+<img src="./img/ch10_05.png" width="60%"/>
 
 
 
