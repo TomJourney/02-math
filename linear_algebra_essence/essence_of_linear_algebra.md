@@ -1859,6 +1859,10 @@ $$
 
 <img src="./img/ch10_14.png" width="50%"/>
 
+【总结】
+$$
+A\vec{v}=\lambda \vec{v} \\ A\vec{v}-\lambda I\vec{v}=0 \\ (A-\lambda I)\vec{v}=0 \\ det(A-\lambda I)=0
+$$
 <br>
 
 ---
