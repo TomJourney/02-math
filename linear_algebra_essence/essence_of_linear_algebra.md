@@ -1970,6 +1970,22 @@ $$
 
 - 其中一个重要的方面是：矩阵与自己多次相乘的结果都更加容易计算；
 
+$$
+\begin{bmatrix}3 &0 \\ 0 &2\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix}=\begin{bmatrix} 3x \\ 2y\end{bmatrix} 
+$$
+
+$$
+\begin{bmatrix}3 &0 \\ 0 &2\end{bmatrix} \begin{bmatrix} 3x \\ 2y\end{bmatrix} =\begin{bmatrix} 9x \\ 4y\end{bmatrix}
+$$
+
+3）因为对角阵仅仅是让基向量与某个特征值相乘；
+
+- 所以多次应用矩阵乘法，比如100次，也只是将每个基向量与对应特征值的100次幂相乘；
+
+$$
+\begin{bmatrix}3 &0 \\ 0 &2\end{bmatrix}...\begin{bmatrix}3 &0 \\ 0 &2\end{bmatrix}(100次) \begin{bmatrix} x \\ y\end{bmatrix} =\begin{bmatrix} 3^{100}x \\ 2^{100}y\end{bmatrix}
+$$
+
 
 
 
