@@ -1501,15 +1501,26 @@ $$
 
 1）虽然我们都关注空间中的同一个向量，在标准坐标系使用坐标$\begin{bmatrix} 3 \\ 2\end{bmatrix}$来表示，但在基向量$b_1=\begin{bmatrix}2 \\ 1\end{bmatrix}, b_2=\begin{bmatrix}-1 \\ 1\end{bmatrix}$定义的坐标系中，使用坐标$\begin{bmatrix} 5/3 \\ 1/3 \end{bmatrix}$ 来表示。（<font color=red>同一个物理点(3,2)在不同坐标系的坐标是不同的</font>）
 $$
-\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix}5/3 \\ 1/3 \end{bmatrix}=5/3\begin{bmatrix}2 \\ 1 \end{bmatrix}+1/3\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
+\begin{bmatrix}1 & 0 \\ 0 &1\end{bmatrix} \begin{bmatrix} 3 \\ 2 \end{bmatrix}=3\begin{bmatrix} 1 \\ 0 \end{bmatrix}+2\begin{bmatrix}0 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
 $$
 
+$$
+\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix}5/3 \\ 1/3 \end{bmatrix}=5/3\begin{bmatrix}2 \\ 1 \end{bmatrix}+1/3\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
+$$
 
 2）无论采用什么基向量定义的坐标系，它们在原点(0,0)的含义上达成共识，即原点(0,0)是任意向量乘以0所得到的向量； 
 
 3）一个很自然的问题：我们如何在不同坐标系之间进行转换？
 
-- 比如说，在基向量$b_1=\begin{bmatrix}2 \\ 1\end{bmatrix}, b_2=\begin{bmatrix}-1 \\ 1\end{bmatrix}$定义的坐标系中，使用坐标(-1, 2)来描述一个向量；那么这个向量在标准坐标系中应该如何表示的问题。
+- 比如说，在基向量$b_1=\begin{bmatrix}2 \\ 1\end{bmatrix}, b_2=\begin{bmatrix}-1 \\ 1\end{bmatrix}$定义的坐标系中，使用坐标(-1, 2)来描述一个向量$\begin{bmatrix}-4 \\1\end{bmatrix}$；那么这个向量在标准坐标系中应该如何表示的问题。
+
+- 
+
+- $$
+  \begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}=(-1)\begin{bmatrix}2 \\ 1 \end{bmatrix}+2\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}-4 \\ 1 \end{bmatrix}
+  $$
+
+- 
 
 <br>
 
@@ -1544,6 +1555,9 @@ $$
 ### 【9.2.1】相反方向的基向量变换
 
 1）例：在我们的坐标系，即标准坐标系中，有一个坐标为(3,2)的向量；我如何计算出詹尼佛坐标系中的坐标为(5/3,1/3)呢？
+$$
+\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix}5/3 \\ 1/3 \end{bmatrix}=5/3\begin{bmatrix}2 \\ 1 \end{bmatrix}+1/3\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
+$$
 
 - 之前的基变换矩阵从詹尼佛的语言转化到我们的语言，你就此入手，<font color=red>取这个矩阵的逆</font>；
 - 记住一点：一个变换的逆是一个新的变换，它将所选的变换逆向进行；
@@ -1569,7 +1583,21 @@ $$
 
 <img src="./img/ch09_21.png" width="60%"/>
 
-2）逆矩阵则与之相反；
+$$
+\begin{bmatrix}1 & 0 \\ 0 &1\end{bmatrix} \begin{bmatrix} 3 \\ 2 \end{bmatrix}=3\begin{bmatrix} 1 \\ 0 \end{bmatrix}+2\begin{bmatrix}0 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix}5/3 \\ 1/3 \end{bmatrix}=5/3\begin{bmatrix}2 \\ 1 \end{bmatrix}+1/3\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}3 \\ 2 \end{bmatrix}
+$$
+
+$$
+即： 詹尼佛坐标系矩阵A 乘以 詹尼佛坐标 = 标准坐标系的坐标（物理向量）
+$$
+
+
+
+2）逆矩阵则与之相反（把我们的语言描述转换为使用詹尼佛语言来描述同一个物理向量）；
 
 <img src="./img/ch09_22.png" width="60%" />
 
@@ -1624,14 +1652,37 @@ $$
 \begin{bmatrix}2 & -1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} -1 \\ 2 \end{bmatrix} 表示：詹尼佛坐标系基向量矩阵乘以詹尼佛坐标系中的坐标(-1,2)，乘积结果是标准坐标系中的向量位置；
 $$
 
+$$
+詹尼佛坐标系：\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}=(-1)\begin{bmatrix}2 \\ 1 \end{bmatrix}+2\begin{bmatrix}-1 \\ 1 \end{bmatrix}=\begin{bmatrix}-4 \\ 1 \end{bmatrix}
+$$
 
-2）然后将所得结果左乘线性变换矩阵：此时给出的是变换后的向量，但仍然是用<font color=red>我们的语言(标准坐标系)</font>来描述的；
+$$
+标准坐标系：\begin{bmatrix}1 & 0 \\ 0 &1\end{bmatrix} \begin{bmatrix} -4 \\ 1 \end{bmatrix}=(-4)\begin{bmatrix}1 \\ 0 \end{bmatrix}+1\begin{bmatrix}0 \\ 1 \end{bmatrix}=\begin{bmatrix}-4 \\ 1 \end{bmatrix}
+$$
+
+
+
+2）然后将所得结果左乘线性变换矩阵$\begin{bmatrix}0 &-1 \\ 1 &0\end{bmatrix}$(逆时针旋转90度)：此时给出的是变换后的向量，但仍然是用<font color=red>我们的语言(标准坐标系)</font>来描述的；
 
 <img src="./img/ch09_27.png" width="60%"/>
+$$
+\begin{aligned}
+\begin{bmatrix} 0 & -1 \\ 1 &0\end{bmatrix}_{逆时针旋转转换矩阵}\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix}_{詹尼佛基向量矩阵} \begin{bmatrix} -1 \\ 2 \end{bmatrix}_{詹尼佛坐标} &=\begin{bmatrix} 0 & -1 \\ 1 &0\end{bmatrix}_{逆时针旋转转换矩阵} \begin{bmatrix}-4 \\ 1 \end{bmatrix} \\&=\begin{bmatrix}-1 \\-4\end{bmatrix}
+\end{aligned}
+$$
+
 
 3）所以：最后一步，像之前一样，将所得结果左乘基变换矩阵的逆；
 
-从而得到变换后的向量；然而使用詹尼佛的语言(詹尼佛坐标系)来描述的；
+从而得到变换后的向量；然而是使用詹尼佛的语言(詹尼佛坐标系)来描述的；
+$$
+\begin{aligned}
+&\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix}^{-1}_{詹尼佛基向量矩阵的逆}\begin{bmatrix} 0 & -1 \\ 1 &0\end{bmatrix}_{逆时针旋转矩阵}\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix}_{詹尼佛基向量矩阵} \begin{bmatrix} -1 \\ 2 \end{bmatrix}_{詹尼佛坐标} \\&=\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix}^{-1} \begin{bmatrix} 0 & -1 \\ 1 &0\end{bmatrix}_{逆时针旋换矩阵} \begin{bmatrix}-4 \\ 1 \end{bmatrix}_{标准坐标系坐标} \\&=\begin{bmatrix}2 & -1 \\ 1 &1\end{bmatrix}^{-1}\begin{bmatrix}-1 \\-4\end{bmatrix}_{逆时针旋转后的标准坐标系坐标}
+\\&= \begin{bmatrix}1/3 & 1/3 \\ -1/3 &2/3 \end{bmatrix}\begin{bmatrix}-1 \\-4\end{bmatrix}
+\\&=\begin{bmatrix}-5/3 \\-7/3\end{bmatrix}_{逆时针旋转后的詹尼佛坐标系坐标}
+\end{aligned}
+$$
+
 
 <img src="./img/ch09_28.png" width="60%"/>
 
@@ -1645,9 +1696,10 @@ $$
 
 5）这三个矩阵的复合给出的就是用詹尼佛语言描述的线性变换矩阵；
 
-它接收用詹尼佛语言描述的向量；并输出用詹尼佛语言描述的变换后的向量；
+- 它接收用詹尼佛语言描述的向量；并输出用詹尼佛语言描述的变换后的向量；
 
-对于目前这一特定例子而言，詹尼佛的基向量用我们的语言来描述，是(2,1)和(1,-1)
+- 对于目前这一特定例子而言，詹尼佛的基向量用我们的语言来描述，是(2,1)和(1,-1)
+
 
 6）线性变换是90度逆时针旋转；
 
@@ -1655,7 +1707,7 @@ $$
 
 <img src="./img/ch09_30.png" width="60%"/>
 
-7）所以，如果詹尼佛用这个矩阵与它的坐标系中的一个向量相乘，结果就是在它的坐标系中描述的该向量旋转90度的结果；
+7）所以，<font color=red>如果詹尼佛用这个矩阵与它的坐标系中的一个向量相乘，结果就是在它的坐标系中描述的该向量旋转90度的结果</font>；
 
 <img src="./img/ch09_31.png" width="60%"/>
 
@@ -2058,9 +2110,52 @@ $$
 
 # 【11】抽象向量空间-20251116
 
+## 【11.1】向量是什么？
 
+1）向量是什么？
 
+- 比如说一个二维向量$\begin{bmatrix}1 \\\ 2 \end{bmatrix}$。从根本上说，它是平面内的一个箭头；而为了方便起见，我们用坐标来描述它。
+- 或者说，它是一个实数对，而我们只是将它形象理解为平面内的一个箭头；
 
+2）一方面，将向量解释为一组数字给人感觉清晰明了；四维向量或100维向量看上去就像是可以操作的真实具体的概念；
+
+- 与之相反：四维空间之类的东西只是一个模糊的几何概念；
+
+- 不用手比划，是很难解释清楚的；
+
+3）但是另一方面：对于那些运用线性代数的人，尤其是对于熟悉基变换向量的人来说，它们通常感觉所处的空间独立于坐标存在；
+
+- 而且坐标描述实际上有些随意；
+- 因为它依赖于你所选择的基向量；
+
+4）线性代数中的核心话题：如行列式或特征向量等，它们似乎不受所选坐标系影响；
+
+- 行列式：表示一个变换对面积的缩放比例；
+- 特征向量：在变换中仍留在它所张成空间中的向量；
+- 这两者都暗含空间中的性质；
+- 你可以自由选择坐标系，这并不会改变它们根本的值；
+
+5）<font color=red> 行列式与特征向量与所选坐标系无关 </font>；
+
+6）但是如果向量根本上并不是由一组实数构成的，它们的本质其实更具空间性；
+
+- 问题：这不禁让人产生疑问：那么数学家所说的空间或空间性是什么意思？
+
+<font color=red>为了探索上述问题，本章节会讨论一种既不是一个箭头也不是一组数字，但是同样具有向量特性的东西——函数</font>；
+
+<br>
+
+---
+
+### 【11.1.2】函数-另一种向量
+
+1）从某种意义上数， 函数是另一种向量；
+
+2）类比两个向量加法，我们也可以将两个函数f和g相加，从而得到一个新函数（f+g），这种做法是合理的。
+
+<img src="./img/ch11_01.png" width="60%"/>
+
+3）
 
 
 
